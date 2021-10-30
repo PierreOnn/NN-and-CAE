@@ -1,9 +1,11 @@
 import numpy as np
+import wandb
+import gc
 
 
 # Sigmoid activation function
 def sigmoid(input):
-    return 1/(1+np.exp(-input))
+    return 1 / (1 + np.exp(-input))
 
 
 # Derivative of Sigmoid function
@@ -94,14 +96,29 @@ if __name__ == "__main__":
     By = np.random.randn(8)
     ann = ANN(Wxh, Why, Bh, By)
 
-    Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.01, epochs=50000)
-    pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
+    # Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.01, epochs=50000)
+    # pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
+    #
+    # print("Predicted: ", pred)
+    # print("Real: ", Y_test)
+    # print('Training Set Accuracy: ', (pred == Y_test).mean() * 100, "%")
+    # print("Bh: \n", Bh)
+    # print("Wxh: \n", Wxh)
+    # print("By: \n", By)
+    # print("Why: \n", Why)
+    # print("a3: \n", np.round(a3, 2))
 
-    print("Predicted: ", pred)
-    print("Real: ", Y_test)
-    print('Training Set Accuracy: ', (pred == Y_test).mean() * 100, "%")
-    print("Bh: \n", Bh)
-    print("Wxh: \n", Wxh)
-    print("By: \n", By)
-    print("Why: \n", Why)
-    print("a3: \n", np.round(a3, 2))
+    learning_rates = [0.005, 0.01, 0.025, 0.05]
+    epochs = [100, 500, 1000, 2000, 5000, 10000]
+    for learning_rate in learning_rates:
+        for epoch in epochs:
+            run = wandb.init(project='Assignment 1',
+                             config={
+                                 "learning_rate": learning_rate,
+                                 "epoch": epoch,
+                             })
+            config = wandb.config
+            wandb.run.name = "Lr" + str(config.learning_rate) + "_Epochs" + str(config.epoch)
+            Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=config.learning_rate, epochs=config.epoch)
+            pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
+            wandb.log({'Training Set Accuracy: ': (pred == Y_test).mean() * 100})
