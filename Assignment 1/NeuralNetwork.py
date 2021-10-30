@@ -1,5 +1,4 @@
 import numpy as np
-import math
 
 
 # Sigmoid activation function
@@ -82,26 +81,27 @@ class ANN():
 
 # This is just code to test the neural network, so not needed for the actual program
 if __name__ == "__main__":
-    X = np.array(
+    X_test = np.array(
         [[1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0],
          [0, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1]])
-    Y = np.array(
-        [[1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0],
-         [0, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1]])
+    Y_test = np.argwhere(X_test == 1)[:, -1]
+    X_train = np.copy(X_test)
+    Y_train = np.copy(X_train)
+
     Wxh = np.random.rand(8, 3)
     Why = np.random.rand(3, 8)
     Bh = np.random.randn(3)
     By = np.random.randn(8)
     ann = ANN(Wxh, Why, Bh, By)
 
-    Wxh, Bh, Why, By, costs = ann.training(X, Y, learning_rate=0.01, epochs=50000)
-    pred, a3 = ann.predict(Wxh, Why, Bh, By, X)
+    Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.01, epochs=50000)
+    pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
 
-    print("predicted: ", pred)
-    print("real: ", Y)
-    print('Training Set Accuracy: ', (pred == X).mean() * 100, "%")
-    print("b1: \n", Bh)
-    print("Theta1: \n", Wxh)
-    print("b2: \n", By)
-    print("Theta2: \n", Why)
+    print("Predicted: ", pred)
+    print("Real: ", Y_test)
+    print('Training Set Accuracy: ', (pred == Y_test).mean() * 100, "%")
+    print("Bh: \n", Bh)
+    print("Wxh: \n", Wxh)
+    print("By: \n", By)
+    print("Why: \n", Why)
     print("a3: \n", np.round(a3, 2))
