@@ -1,0 +1,25 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.2",
+    "heartbeatAt": "2021-10-30T18:32:21.974529",
+    "startedAt": "2021-10-30T18:32:16.445514",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "--epochs=1000",
+        "--learning_rate=0.01"
+    ],
+    "state": "running",
+    "program": "NeuralNetwork.py",
+    "codePath": "NeuralNetwork.py",
+    "git": {
+        "remote": "https://github.com/PrinceWallyy/MachineLearning.git",
+        "commit": "171eb4b54f618c8c7b6f97c802fc4ef13015a068"
+    },
+    "email": "olvc.pierre.onghena@gmail.com",
+    "root": "C:/Users/olvcp/PycharmProjects/MachineLearning",
+    "host": "DESKTOP-NCTAT39",
+    "username": "olvcp",
+    "executable": "c:\\python\\python38\\python.exe"
+}

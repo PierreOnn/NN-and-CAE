@@ -1,6 +1,13 @@
 import numpy as np
 import wandb
-import gc
+
+
+hyperparameter_defaults = dict(
+        learning_rate=0.01,
+        epochs=2000,
+    )
+wandb.init(config=hyperparameter_defaults, project="assignment 1")
+config = wandb.config
 
 
 # Sigmoid activation function
@@ -26,9 +33,9 @@ class ANN():
         self.Bh = Bh
         self.By = By
 
-    def training(self, X, Y, learning_rate, epochs):
+    def training(self, X, Y):
         costs = []
-        for epoch in range(epochs):
+        for epoch in range(config.epochs):
             # Feedforward
             z2 = np.dot(X, self.Wxh) + self.Bh
             a2 = sigmoid(z2)
@@ -52,11 +59,11 @@ class ANN():
             cost_b1 = dcost_da2 * da2_dz2
 
             # Weights update
-            self.Wxh -= learning_rate * cost_theta1
-            self.Bh -= learning_rate * cost_b1.sum(axis=0)
+            self.Wxh -= config.learning_rate * cost_theta1
+            self.Bh -= config.learning_rate * cost_b1.sum(axis=0)
 
-            self.Why -= learning_rate * cost_theta2
-            self.By -= learning_rate * cost_b2.sum(axis=0)
+            self.Why -= config.learning_rate * cost_theta2
+            self.By -= config.learning_rate * cost_b2.sum(axis=0)
 
             # Cost calculation
             if epoch % 200 == 0:
@@ -108,17 +115,9 @@ if __name__ == "__main__":
     # print("Why: \n", Why)
     # print("a3: \n", np.round(a3, 2))
 
-    learning_rates = [0.005, 0.01, 0.025, 0.05]
-    epochs = [100, 500, 1000, 2000, 5000, 10000]
-    for learning_rate in learning_rates:
-        for epoch in epochs:
-            run = wandb.init(project='Assignment 1',
-                             config={
-                                 "learning_rate": learning_rate,
-                                 "epoch": epoch,
-                             })
-            config = wandb.config
-            wandb.run.name = "Lr" + str(config.learning_rate) + "_Epochs" + str(config.epoch)
-            Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=config.learning_rate, epochs=config.epoch)
-            pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
-            wandb.log({'Training Set Accuracy: ': (pred == Y_test).mean() * 100})
+
+    wandb.run.name = "Lr" + str(config.learning_rate) + "_Epochs" + str(config.epochs)
+    Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train)
+    pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
+    accuracy = (pred == Y_test).mean() * 100
+    wandb.log({'Training Set Accuracy: ': accuracy})

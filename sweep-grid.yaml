@@ -1,0 +1,10 @@
+program: NeuralNetwork.py
+method: grid
+metric:
+  goal: maximize
+  name: Training set accuracy
+parameters:
+  learning_rate:
+    values: [0.001, 0.005, 0.01, 0.025, 0.05]
+  epochs:
+    values: [100, 500, 1000, 2000, 5000, 10000]

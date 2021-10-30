@@ -1,0 +1,137 @@
+2021-10-30 20:35:52,972 INFO    MainThread:22628 [internal.py:wandb_internal():88] W&B internal server running at pid: 22628, started at: 2021-10-30 20:35:52.963372
+2021-10-30 20:35:52,975 INFO    WriterThread:22628 [datastore.py:open_for_write():77] open: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\run-kaxy6lvv.wandb
+2021-10-30 20:35:52,975 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: check_version
+2021-10-30 20:35:52,986 DEBUG   SenderThread:22628 [sender.py:send():176] send: header
+2021-10-30 20:35:52,986 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: check_version
+2021-10-30 20:35:53,154 DEBUG   SenderThread:22628 [sender.py:send():176] send: run
+2021-10-30 20:35:53,517 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: run_start
+2021-10-30 20:35:53,529 INFO    SenderThread:22628 [dir_watcher.py:__init__():168] watching files in: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files
+2021-10-30 20:35:53,530 INFO    SenderThread:22628 [sender.py:_start_run_threads():696] run started: kaxy6lvv with start time 1635618951
+2021-10-30 20:35:53,530 DEBUG   SenderThread:22628 [sender.py:send():176] send: summary
+2021-10-30 20:35:53,533 INFO    SenderThread:22628 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-10-30 20:35:54,543 INFO    Thread-12 :22628 [dir_watcher.py:_on_file_created():216] file/dir created: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-summary.json
+2021-10-30 20:35:56,923 DEBUG   HandlerThread:22628 [meta.py:__init__():39] meta init
+2021-10-30 20:35:56,929 DEBUG   HandlerThread:22628 [meta.py:__init__():53] meta init done
+2021-10-30 20:35:56,929 DEBUG   HandlerThread:22628 [meta.py:probe():210] probe
+2021-10-30 20:35:56,931 DEBUG   HandlerThread:22628 [meta.py:_setup_git():200] setup git
+2021-10-30 20:35:57,059 DEBUG   HandlerThread:22628 [meta.py:_setup_git():207] setup git done
+2021-10-30 20:35:57,059 DEBUG   HandlerThread:22628 [meta.py:_save_pip():57] save pip
+2021-10-30 20:35:57,060 DEBUG   HandlerThread:22628 [meta.py:_save_pip():71] save pip done
+2021-10-30 20:35:57,061 DEBUG   HandlerThread:22628 [meta.py:probe():252] probe done
+2021-10-30 20:35:57,068 DEBUG   SenderThread:22628 [sender.py:send():176] send: files
+2021-10-30 20:35:57,068 INFO    SenderThread:22628 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-10-30 20:35:57,085 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: stop_status
+2021-10-30 20:35:57,085 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: stop_status
+2021-10-30 20:35:57,301 DEBUG   SenderThread:22628 [sender.py:send():176] send: run
+2021-10-30 20:35:57,592 INFO    Thread-12 :22628 [dir_watcher.py:_on_file_modified():229] file/dir modified: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\config.yaml
+2021-10-30 20:35:57,592 INFO    Thread-12 :22628 [dir_watcher.py:_on_file_created():216] file/dir created: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\output.log
+2021-10-30 20:35:57,593 INFO    Thread-12 :22628 [dir_watcher.py:_on_file_created():216] file/dir created: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\requirements.txt
+2021-10-30 20:35:57,594 INFO    Thread-12 :22628 [dir_watcher.py:_on_file_created():216] file/dir created: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-metadata.json
+2021-10-30 20:35:57,769 INFO    SenderThread:22628 [sender.py:send_run():600] updated run: kaxy6lvv
+2021-10-30 20:35:57,770 INFO    Thread-17 :22628 [upload_job.py:push():133] Uploaded file C:\Users\olvcp\AppData\Local\Temp\tmpcfv6mqc1wandb\1bkv2fzz-wandb-metadata.json
+2021-10-30 20:35:58,048 DEBUG   SenderThread:22628 [sender.py:send():176] send: history
+2021-10-30 20:35:58,049 DEBUG   SenderThread:22628 [sender.py:send():176] send: summary
+2021-10-30 20:35:58,051 INFO    SenderThread:22628 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-10-30 20:35:58,052 DEBUG   SenderThread:22628 [sender.py:send():176] send: telemetry
+2021-10-30 20:35:58,052 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:58,052 DEBUG   SenderThread:22628 [sender.py:send():176] send: exit
+2021-10-30 20:35:58,052 INFO    SenderThread:22628 [sender.py:send_exit():281] handling exit code: 0
+2021-10-30 20:35:58,052 INFO    SenderThread:22628 [sender.py:send_exit():289] send defer
+2021-10-30 20:35:58,052 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:58,053 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,054 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 0
+2021-10-30 20:35:58,054 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,054 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 0
+2021-10-30 20:35:58,054 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 1
+2021-10-30 20:35:58,054 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,054 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 1
+2021-10-30 20:35:58,099 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,099 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 1
+2021-10-30 20:35:58,100 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 2
+2021-10-30 20:35:58,100 DEBUG   SenderThread:22628 [sender.py:send():176] send: stats
+2021-10-30 20:35:58,101 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,101 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 2
+2021-10-30 20:35:58,102 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,102 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 2
+2021-10-30 20:35:58,102 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 3
+2021-10-30 20:35:58,103 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,103 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 3
+2021-10-30 20:35:58,104 DEBUG   SenderThread:22628 [sender.py:send():176] send: summary
+2021-10-30 20:35:58,105 INFO    SenderThread:22628 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-10-30 20:35:58,105 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,106 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 3
+2021-10-30 20:35:58,106 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 4
+2021-10-30 20:35:58,107 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,107 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 4
+2021-10-30 20:35:58,107 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,107 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 4
+2021-10-30 20:35:58,166 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:58,321 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 5
+2021-10-30 20:35:58,321 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:58,323 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,323 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 5
+2021-10-30 20:35:58,323 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,323 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 5
+2021-10-30 20:35:58,323 INFO    SenderThread:22628 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-10-30 20:35:58,432 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:58,606 INFO    SenderThread:22628 [dir_watcher.py:_on_file_modified():229] file/dir modified: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\config.yaml
+2021-10-30 20:35:58,606 INFO    SenderThread:22628 [dir_watcher.py:_on_file_modified():229] file/dir modified: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-summary.json
+2021-10-30 20:35:58,607 INFO    SenderThread:22628 [dir_watcher.py:finish():312] scan: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files
+2021-10-30 20:35:58,608 INFO    SenderThread:22628 [dir_watcher.py:finish():318] scan save: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\config.yaml config.yaml
+2021-10-30 20:35:58,608 INFO    SenderThread:22628 [dir_watcher.py:finish():318] scan save: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\output.log output.log
+2021-10-30 20:35:58,609 INFO    SenderThread:22628 [dir_watcher.py:finish():318] scan save: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\requirements.txt requirements.txt
+2021-10-30 20:35:58,612 INFO    SenderThread:22628 [dir_watcher.py:finish():318] scan save: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-metadata.json wandb-metadata.json
+2021-10-30 20:35:58,612 INFO    SenderThread:22628 [dir_watcher.py:finish():318] scan save: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-summary.json wandb-summary.json
+2021-10-30 20:35:58,614 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 6
+2021-10-30 20:35:58,614 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:58,618 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,620 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 6
+2021-10-30 20:35:58,621 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,621 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 6
+2021-10-30 20:35:58,621 INFO    SenderThread:22628 [file_pusher.py:finish():176] shutting down file pusher
+2021-10-30 20:35:58,621 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 7
+2021-10-30 20:35:58,623 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,623 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 7
+2021-10-30 20:35:58,623 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,623 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 7
+2021-10-30 20:35:58,730 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:58,926 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 8
+2021-10-30 20:35:58,926 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:58,927 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,927 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 8
+2021-10-30 20:35:58,927 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,928 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 8
+2021-10-30 20:35:58,928 INFO    SenderThread:22628 [sender.py:send_request_defer():336] send defer: 9
+2021-10-30 20:35:58,929 DEBUG   SenderThread:22628 [sender.py:send():176] send: final
+2021-10-30 20:35:58,929 DEBUG   SenderThread:22628 [sender.py:send():176] send: footer
+2021-10-30 20:35:58,930 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: defer
+2021-10-30 20:35:58,930 INFO    HandlerThread:22628 [handler.py:handle_request_defer():138] handle defer: 9
+2021-10-30 20:35:58,930 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: defer
+2021-10-30 20:35:58,930 INFO    SenderThread:22628 [sender.py:send_request_defer():298] handle sender defer: 9
+2021-10-30 20:35:59,040 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,040 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,149 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,149 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,258 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,259 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,353 INFO    Thread-19 :22628 [upload_job.py:push():133] Uploaded file C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\requirements.txt
+2021-10-30 20:35:59,368 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,368 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,402 INFO    Thread-18 :22628 [upload_job.py:push():133] Uploaded file C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\config.yaml
+2021-10-30 20:35:59,434 INFO    Thread-20 :22628 [upload_job.py:push():133] Uploaded file C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\files\wandb-summary.json
+2021-10-30 20:35:59,477 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,478 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,586 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,586 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,696 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: poll_exit
+2021-10-30 20:35:59,697 DEBUG   SenderThread:22628 [sender.py:send_request():186] send_request: poll_exit
+2021-10-30 20:35:59,697 INFO    SenderThread:22628 [file_pusher.py:join():181] waiting for file pusher
+2021-10-30 20:35:59,699 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: get_summary
+2021-10-30 20:35:59,701 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: sampled_history
+2021-10-30 20:35:59,702 DEBUG   HandlerThread:22628 [handler.py:handle_request():121] handle_request: shutdown
+2021-10-30 20:35:59,702 INFO    HandlerThread:22628 [handler.py:finish():632] shutting down handler
+2021-10-30 20:35:59,942 INFO    WriterThread:22628 [datastore.py:close():258] close: C:\Users\olvcp\PycharmProjects\MachineLearning\wandb\run-20211030_203551-kaxy6lvv\run-kaxy6lvv.wandb
+2021-10-30 20:36:00,709 INFO    SenderThread:22628 [sender.py:finish():925] shutting down sender
+2021-10-30 20:36:00,710 INFO    SenderThread:22628 [file_pusher.py:finish():176] shutting down file pusher
+2021-10-30 20:36:00,710 INFO    SenderThread:22628 [file_pusher.py:join():181] waiting for file pusher
+2021-10-30 20:36:00,711 INFO    MainThread:22628 [internal.py:handle_exit():78] Internal process exited
