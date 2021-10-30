@@ -4,7 +4,7 @@ import wandb
 
 hyperparameter_defaults = dict(
         learning_rate=0.01,
-        epochs=2000,
+        epochs=5000,
     )
 wandb.init(config=hyperparameter_defaults, project="assignment 1")
 config = wandb.config
@@ -65,20 +65,15 @@ class ANN():
             self.Why -= config.learning_rate * cost_theta2
             self.By -= config.learning_rate * cost_b2.sum(axis=0)
 
-            # Cost calculation
-            if epoch % 200 == 0:
-                loss = np.sum(-Y * np.log(a3))
-                costs.append(loss)
-
         return self.Wxh, self.Bh, self.Why, self.By, costs
 
     def predict(self, Wxh, Why, Bh, By, X):
         m = np.shape(X)[0]  # number of test instances
         prediction = np.zeros(m)
-        # hidden layer (layer2)
+        # Hidden layer (layer2)
         z2 = np.dot(X, Wxh) + Bh
         a2 = sigmoid(z2)
-        # output layer (layer3)
+        # Output layer (layer3)
         z3 = np.dot(a2, Why) + By
         a3 = sigmoid(z3)
 
@@ -88,7 +83,6 @@ class ANN():
         return prediction, a3
 
 
-# This is just code to test the neural network, so not needed for the actual program
 if __name__ == "__main__":
     X_test = np.array(
         [[1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0],
@@ -103,21 +97,8 @@ if __name__ == "__main__":
     By = np.random.randn(8)
     ann = ANN(Wxh, Why, Bh, By)
 
-    # Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.01, epochs=50000)
-    # pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
-    #
-    # print("Predicted: ", pred)
-    # print("Real: ", Y_test)
-    # print('Training Set Accuracy: ', (pred == Y_test).mean() * 100, "%")
-    # print("Bh: \n", Bh)
-    # print("Wxh: \n", Wxh)
-    # print("By: \n", By)
-    # print("Why: \n", Why)
-    # print("a3: \n", np.round(a3, 2))
-
-
-    wandb.run.name = "Lr" + str(config.learning_rate) + "_Epochs" + str(config.epochs)
     Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train)
     pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
     accuracy = (pred == Y_test).mean() * 100
     wandb.log({'Training Set Accuracy: ': accuracy})
+    wandb.run.name = "Lr" + str(config.learning_rate) + "_Epochs" + str(config.epochs)
