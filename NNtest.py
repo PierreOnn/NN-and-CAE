@@ -94,7 +94,7 @@ if __name__ == "__main__":
     By = np.random.randn(8)
     ann = ANN(Wxh, Why, Bh, By)
 
-    Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.01, epochs=50000)
+    Wxh, Bh, Why, By, costs = ann.training(X_train, Y_train, learning_rate=0.5, epochs=110)
     pred, a3 = ann.predict(Wxh, Why, Bh, By, X_test)
 
     print("Predicted: ", pred)
