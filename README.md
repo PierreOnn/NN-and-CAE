@@ -1,15 +1,17 @@
 How to run the code:
 
-Besides NeuralNetwork.py with sweeps, another python file NNtest.py was created to 
+Besides **NeuralNetwork.py** with *sweeps*, another python file **NNtest.py** was created to 
 illustrate the working of the architecture.
 NNtest.py represents a pre-defined configuration of the learning rate and number of epochs
 and computes the corresponding training accuracy.
 
-If you're running the code with a sweep in NeuralNetwork.py, please install the required librarys:
-- wandb
-- numpy
+### NNtest.py
+This pyhton file could be run freely and serves to provide the inner working of the architecture.
+Herewith, the learning rate and number of epochs are initialized to 0.5 and 110 respectively
+for obtaining an accuracy of 100%.
 
-Before running the code, please execute the following steps in the terminal (https://wandb.ai/quickstart/pytorch):
+### NeuralNetwork.py (with Sweeps)
+If you're running the code with a sweep in NeuralNetwork.py, please execute the following steps in the terminal (https://wandb.ai/quickstart/pytorch):
 - pip install wandb
 - wandb login
 - 3baf9835f7643ccdd5a2df4c3d89245c61479e0f
