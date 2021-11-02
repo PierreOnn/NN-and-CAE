@@ -3,7 +3,8 @@ How to run the code:
 Besides **NeuralNetwork.py** with *sweeps*, another python file **NNtest.py** was created to 
 illustrate the working of the architecture.
 NNtest.py represents a predefined configuration of the learning rate and number of epochs
-and computes the corresponding training accuracy.
+and computes the corresponding training accuracy. Furthermore, it could be run to identify
+the corrsponding weights and biases for each initialization of parameters and delivered training accuracy.
 
 ### NNtest.py
 This pyhton file could be run freely and serves to provide the inner working of the architecture.
