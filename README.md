@@ -2,7 +2,7 @@ How to run the code:
 
 Besides **NeuralNetwork.py** with *sweeps*, another python file **NNtest.py** was created to 
 illustrate the working of the architecture.
-NNtest.py represents a pre-defined configuration of the learning rate and number of epochs
+NNtest.py represents a predefined configuration of the learning rate and number of epochs
 and computes the corresponding training accuracy.
 
 ### NNtest.py
@@ -19,7 +19,7 @@ If you're running the code with a sweep in NeuralNetwork.py, please execute the 
 - wandb agent machinelearningassignment/MachineLearning/10u28ok3
 
 Now, when logged in and the agent has started, it should be able to run the code in regard to 
-the pre-defined sweeps in one of the yaml files and collect the outcomes on the platform.
+the predefined sweeps in one of the yaml files and collect the outcomes on the platform.
 
 Unfortunately because of the deep integration for hyperparameter tuning, it is not 
 possible to run that code without Weights and Biases. 

@@ -3,8 +3,8 @@ import wandb
 
 
 hyperparameter_defaults = dict(
-        learning_rate=0.01,
-        epochs=5000,
+        learning_rate=0.5,
+        epochs=100,
     )
 wandb.init(config=hyperparameter_defaults, project="assignment 1")
 config = wandb.config
